@@ -32,7 +32,7 @@ struct shared{
 	vector<vector<int> > table;
 	void print(){
 		for(int i = 0; i < table[0].size(); i ++)
-			print("______");
+			printf("______");
 		printf("\n");
 		for(int i = 0; i < table.size(); i ++){
 			for (int j = 0; j < table[i].size(); j++){
