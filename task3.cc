@@ -31,8 +31,8 @@ struct shared{
 	bool ready;
 	vector<vector<int> > table;
 	void print(){
-		for(int i = 0; i < table.size(); i ++)
-			print("_____");
+		for(int i = 0; i < table[0].size(); i ++)
+			print("______");
 		printf("\n");
 		for(int i = 0; i < table.size(); i ++){
 			for (int j = 0; j < table[i].size(); j++){
@@ -79,6 +79,7 @@ void *potok(void * arg){
 									a->wall->table[i][j] = 1;
 									pthread_mutex_unlock(a->mutex);
 									printf("%d began (%d,%d)\n", a->id, i, j);
+									a->wall->print();
 									usleep(sleep_time);
 									a->wall->table[i][j] = 2;
 									printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -91,6 +92,7 @@ void *potok(void * arg){
 								a->wall->table[i][j] = 1;
 								pthread_mutex_unlock(a->mutex);
 								printf("%d began (%d,%d)\n", a->id, i, j);
+								a->wall->print();
 								usleep(sleep_time);
 								a->wall->table[i][j] = 2;
 								printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -105,6 +107,7 @@ void *potok(void * arg){
 									a->wall->table[i][j] = 1;
 									pthread_mutex_unlock(a->mutex);
 									printf("%d began (%d,%d)\n", a->id, i, j);
+									a->wall->print();
 									usleep(sleep_time);
 									a->wall->table[i][j] = 2;
 									printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -117,6 +120,7 @@ void *potok(void * arg){
 								a->wall->table[i][j] = 1;
 								pthread_mutex_unlock(a->mutex);
 								printf("%d began (%d,%d)\n", a->id, i, j);
+								a->wall->print();
 								usleep(sleep_time);
 								a->wall->table[i][j] = 2;
 								printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -132,6 +136,7 @@ void *potok(void * arg){
 								a->wall->table[i][j] = 1;
 								pthread_mutex_unlock(a->mutex);
 								printf("%d began (%d,%d)\n", a->id, i, j);
+								a->wall->print();
 								usleep(sleep_time);
 								a->wall->table[i][j] = 2;
 								printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -145,6 +150,7 @@ void *potok(void * arg){
 								a->wall->table[i][j] = 1;
 								pthread_mutex_unlock(a->mutex);
 								printf("%d began (%d,%d)\n", a->id, i, j);
+								a->wall->print();
 								usleep(sleep_time);
 								a->wall->table[i][j] = 2;
 								printf("%d zakonchil (%d,%d)\n", a->id, i, j);
@@ -156,6 +162,7 @@ void *potok(void * arg){
 							a->wall->table[i][j] = 1;
 							pthread_mutex_unlock(a->mutex);
 							printf("%d began (%d,%d)\n", a->id, i, j);
+							a->wall->print();
 							usleep(sleep_time);
 							a->wall->table[i][j] = 2;
 							printf("%d zakonchil (%d,%d)\n", a->id, i, j);
