@@ -31,7 +31,7 @@ struct shared{
 	bool ready;
 	vector<vector<int> > table;
 	void print(){
-		for(int i = 0; i < table[0].size(); i ++)
+		for(int i = 0; i < table[0].size(); i++)
 			printf("______");
 		printf("\n");
 		for(int i = 0; i < table.size(); i ++){
@@ -214,30 +214,3 @@ int main(int argc, char **argv){
 		pthread_join(threads[i], NULL);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
